@@ -23,7 +23,7 @@ class BudgetList:
         try:
             return self.iter_e.__next__()
         except StopIteration as stop:
-            self.iter_o.__next__()
+            return self.iter_o.__next__()
 
     def append(self, item):
         if self.sum_expenses + item < self.budget:
